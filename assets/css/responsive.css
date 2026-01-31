@@ -1,0 +1,401 @@
+/* ===== تحسينات التجاوبية للبحث التربوي ===== */
+
+/* شاشات كبيرة جداً (≥1400px) */
+@media (min-width: 1400px) {
+    .container-xxl {
+        max-width: 1320px;
+    }
+    
+    .hero-title {
+        font-size: 4rem;
+    }
+    
+    .stat-card {
+        padding: 40px 30px;
+    }
+}
+
+/* أجهزة اللاب توب (≥1200px) */
+@media (min-width: 1200px) {
+    .navbar-nav .nav-item {
+        margin-left: 10px;
+    }
+    
+    .chart-container {
+        padding: 30px;
+    }
+}
+
+/* أجهزة اللاب توب الصغيرة والأجهزة اللوحية (≥992px) */
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding: 0.5rem 1rem;
+    }
+    
+    .hero-section {
+        padding: 150px 0 100px;
+    }
+    
+    /* تحسين تخطيط الصفوف */
+    .row-cols-lg-2 .col {
+        flex: 0 0 auto;
+        width: 50%;
+    }
+}
+
+/* الأجهزة اللوحية (≥768px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .hero-title {
+        font-size: 2.8rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .stat-card {
+        margin-bottom: 20px;
+    }
+    
+    /* تحسين الجداول للأجهزة اللوحية */
+    .table-responsive-md {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    /* تحسين التبويبات */
+    .nav-tabs .nav-link {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+}
+
+/* الهواتف الكبيرة (≥576px) */
+@media (min-width: 576px) and (max-width: 767px) {
+    .hero-title {
+        font-size: 2.2rem;
+    }
+    
+    .hero-buttons .btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .stat-card {
+        padding: 20px 15px;
+    }
+    
+    .stat-number {
+        font-size: 2rem;
+    }
+    
+    /* تحسين تخطيط النماذج */
+    .form-row .col,
+    .form-row .col-auto {
+        margin-bottom: 15px;
+    }
+}
+
+/* الهواتف الصغيرة (<576px) */
+@media (max-width: 575px) {
+    /* تحسين الشريط العلوي */
+    .navbar-brand {
+        font-size: 1.1rem;
+    }
+    
+    .navbar-toggler {
+        padding: 0.25rem 0.5rem;
+        font-size: 1rem;
+    }
+    
+    /* تحسين القسم الرئيسي */
+    .hero-section {
+        padding: 80px 0 40px;
+    }
+    
+    .hero-title {
+        font-size: 1.8rem;
+        line-height: 1.3;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+    
+    /* تحسين بطاقات الإحصائيات */
+    .stat-card {
+        padding: 15px 10px;
+        margin-bottom: 15px;
+    }
+    
+    .stat-icon {
+        font-size: 2rem;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+    }
+    
+    .stat-number {
+        font-size: 1.8rem;
+    }
+    
+    .stat-label {
+        font-size: 0.8rem;
+    }
+    
+    /* تحسين أزرار الفلترة */
+    .filter-buttons .btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 5px;
+    }
+    
+    /* تحسين الجداول */
+    .table {
+        font-size: 0.8rem;
+    }
+    
+    .table th,
+    .table td {
+        padding: 8px 5px;
+    }
+    
+    /* تحسين التذييل */
+    .footer {
+        padding: 30px 0 20px;
+    }
+    
+    .footer h5 {
+        font-size: 1rem;
+        margin-top: 20px;
+    }
+    
+    /* تحسين الرسوم البيانية */
+    .chart-container {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+    
+    .chart-container h5 {
+        font-size: 0.9rem;
+    }
+}
+
+/* تحسينات للشاشات الطويلة */
+@media (max-height: 700px) and (min-width: 768px) {
+    .hero-section {
+        padding: 100px 0 60px;
+        min-height: auto;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+}
+
+/* تحسينات للطباعة */
+@media print {
+    /* إخفاء العناصر غير الضرورية */
+    .navbar,
+    .hero-buttons,
+    .filter-buttons,
+    .btn,
+    .no-print,
+    .footer,
+    .scroll-to-top {
+        display: none !important;
+    }
+    
+    /* تحسين المسافات */
+    body {
+        padding-top: 0 !important;
+        font-size: 12pt;
+    }
+    
+    .container {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+    }
+    
+    /* تحسين البطاقات للطباعة */
+    .card,
+    .stat-card,
+    .result-card {
+        break-inside: avoid;
+        box-shadow: none !important;
+        border: 1px solid #ddd !important;
+        margin-bottom: 20px !important;
+    }
+    
+    /* تحسين الجداول للطباعة */
+    .table {
+        border: 1px solid #ddd;
+    }
+    
+    .table th,
+    .table td {
+        border: 1px solid #ddd;
+    }
+    
+    /* تحسين الألوان للطباعة */
+    .text-primary,
+    .text-success,
+    .text-warning,
+    .text-danger {
+        color: #000 !important;
+    }
+    
+    .bg-primary,
+    .bg-success,
+    .bg-warning,
+    .bg-danger {
+        background-color: #fff !important;
+        color: #000 !important;
+    }
+}
+
+/* تحسينات لوضع المناظر الأفقية */
+@media (orientation: landscape) and (max-height: 500px) {
+    .hero-section {
+        padding: 60px 0 30px;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .stat-card {
+        padding: 15px;
+    }
+}
+
+/* تحسينات للشاشات عالية الدقة */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    /* تحسين الخطوط للشاشات عالية الدقة */
+    body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
+
+/* تحسينات لشاشات اللمس */
+@media (hover: none) and (pointer: coarse) {
+    /* زيادة حجم العناصر القابلة للنقر */
+    .btn,
+    .nav-link,
+    .form-control,
+    .dropdown-item {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    /* إزالة تأثيرات hover واستبدالها بتحسينات للمس */
+    .stat-card:hover,
+    .result-card:hover,
+    .btn:hover {
+        transform: none;
+    }
+    
+    .stat-card:active,
+    .result-card:active,
+    .btn:active {
+        transform: scale(0.98);
+    }
+    
+    /* تحسين أشرطة التمرير للشاشات اللمس */
+    .table-responsive {
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+/* تحسينات لقراء الشاشة */
+@media speech {
+    .visually-hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+    }
+    
+    /* التأكد من أن جميع الصور لها نص بديل */
+    img:not([alt]) {
+        border: 3px solid red !important;
+    }
+}
+
+/* تحسينات للتخفيض الحركي */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* تحسينات لوضع التباين العالي */
+@media (prefers-contrast: high) {
+    :root {
+        --primary-color: #000000;
+        --secondary-color: #0000aa;
+        --text-color: #000000;
+        --border-color: #000000;
+    }
+    
+    .btn {
+        border: 2px solid currentColor;
+    }
+}
+
+/* تحسينات لوضع التعتيم */
+@media (prefers-color-scheme: dark) {
+    body:not(.light-mode) {
+        background-color: #121212;
+        color: #e0e0e0;
+    }
+    
+    body:not(.light-mode) .card,
+    body:not(.light-mode) .stat-card,
+    body:not(.light-mode) .result-card {
+        background-color: #1e1e1e;
+        color: #e0e0e0;
+        border-color: #333;
+    }
+    
+    body:not(.light-mode) .navbar-dark {
+        background-color: #1a1a1a;
+    }
+}
+
+/* تحسينات لشبكات الاتصال البطيئة */
+@media (prefers-reduced-data: reduce) {
+    /* منع تحميل الصور الثقيلة */
+    .bg-image,
+    .hero-bg {
+        background-image: none !important;
+    }
+    
+    /* استخدام خطوط النظام */
+    body {
+        font-family: system-ui, -apple-system, sans-serif;
+    }
+    
+    /* تقليل الأحجام */
+    .stat-icon {
+        font-size: 1.5rem;
+    }
+    
+    .chart-container {
+        min-height: 150px;
+    }
+}

@@ -1,0 +1,294 @@
+/* ===== تنسيقات الطباعة المخصصة للبحث ===== */
+
+@media print {
+    /* إعادة تعيين الأساسيات */
+    * {
+        text-shadow: none !important;
+        box-shadow: none !important;
+    }
+    
+    /* إخفاء العناصر غير الضرورية */
+    .no-print,
+    .navbar,
+    .footer,
+    .btn,
+    .hero-buttons,
+    .filter-buttons,
+    .sidebar,
+    .admin-tools,
+    .scroll-to-top,
+    .modal,
+    .alert-dismissible .close {
+        display: none !important;
+    }
+    
+    /* إعدادات الصفحة */
+    @page {
+        margin: 2cm;
+        size: A4;
+    }
+    
+    body {
+        font-size: 12pt;
+        line-height: 1.5;
+        color: #000 !important;
+        background: #fff !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    
+    .container {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    
+    /* تنسيقات الطباعة */
+    a {
+        color: #000 !important;
+        text-decoration: underline !important;
+    }
+    
+    a[href]:after {
+        content: " (" attr(href) ")";
+        font-size: 90%;
+        color: #666;
+    }
+    
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+    
+    /* منع تقسيم العناصر المهمة */
+    .print-keep-together {
+        page-break-inside: avoid !important;
+    }
+    
+    .print-page-break-before {
+        page-break-before: always !important;
+    }
+    
+    .print-page-break-after {
+        page-break-after: always !important;
+    }
+    
+    /* تنسيق رأس التقرير */
+    .print-header {
+        text-align: center;
+        margin-bottom: 2cm;
+        border-bottom: 3px solid #000;
+        padding-bottom: 1cm;
+    }
+    
+    .print-header h1 {
+        font-size: 24pt;
+        font-weight: bold;
+        margin-bottom: 0.5cm;
+    }
+    
+    .print-header .subtitle {
+        font-size: 14pt;
+        color: #666;
+    }
+    
+    .print-header .meta {
+        font-size: 10pt;
+        color: #999;
+        margin-top: 1cm;
+    }
+    
+    /* تنسيق البطاقات للطباعة */
+    .card,
+    .stat-card,
+    .result-card {
+        border: 1px solid #ddd !important;
+        box-shadow: none !important;
+        margin-bottom: 1cm !important;
+        page-break-inside: avoid !important;
+        background: #fff !important;
+        color: #000 !important;
+    }
+    
+    .card-header {
+        background: #f5f5f5 !important;
+        color: #000 !important;
+        border-bottom: 2px solid #000 !important;
+        font-weight: bold;
+    }
+    
+    /* تنسيق الجداول للطباعة */
+    .table {
+        border: 1px solid #ddd;
+        width: 100%;
+        margin-bottom: 1cm;
+        page-break-inside: avoid;
+    }
+    
+    .table th {
+        background: #f5f5f5 !important;
+        color: #000 !important;
+        border: 1px solid #ddd !important;
+        font-weight: bold;
+        padding: 0.3cm;
+    }
+    
+    .table td {
+        border: 1px solid #ddd !important;
+        padding: 0.3cm;
+    }
+    
+    .table-striped tbody tr:nth-child(odd) {
+        background: #f9f9f9 !important;
+    }
+    
+    /* تنسيق الرسوم البيانية للطباعة */
+    .chart-container {
+        page-break-inside: avoid;
+        margin-bottom: 1cm;
+        border: 1px solid #ddd;
+        padding: 0.5cm;
+    }
+    
+    .chart-container h5 {
+        font-weight: bold;
+        margin-bottom: 0.5cm;
+        text-align: center;
+    }
+    
+    /* تنسيق النصوص للطباعة */
+    h1, h2, h3, h4, h5, h6 {
+        color: #000 !important;
+        page-break-after: avoid;
+        page-break-inside: avoid;
+    }
+    
+    h1 {
+        font-size: 20pt;
+        margin-top: 1.5cm;
+        margin-bottom: 0.5cm;
+    }
+    
+    h2 {
+        font-size: 16pt;
+        margin-top: 1cm;
+        margin-bottom: 0.5cm;
+    }
+    
+    h3 {
+        font-size: 14pt;
+        margin-top: 0.8cm;
+        margin-bottom: 0.4cm;
+    }
+    
+    p, li {
+        font-size: 12pt;
+        line-height: 1.6;
+    }
+    
+    /* تنسيق القوائم للطباعة */
+    ul, ol {
+        margin-right: 1cm;
+        margin-bottom: 0.5cm;
+    }
+    
+    /* تنسيق أشرطة التقدم للطباعة */
+    .progress {
+        border: 1px solid #ddd;
+        height: 20px;
+        margin: 0.3cm 0;
+    }
+    
+    .progress-bar {
+        background: #666 !important;
+        color: #000 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    
+    /* تنسيق البادجات للطباعة */
+    .badge {
+        border: 1px solid #000;
+        background: #fff !important;
+        color: #000 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    
+    /* تذييل الصفحة */
+    .print-footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+        font-size: 9pt;
+        color: #666;
+        border-top: 1px solid #ddd;
+        padding-top: 0.3cm;
+    }
+    
+    .print-footer .page-number:after {
+        content: "الصفحة " counter(page);
+    }
+    
+    /* ترويسة الصفحة */
+    .print-header-page {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+        font-size: 9pt;
+        color: #666;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 0.3cm;
+    }
+    
+    /* فاصل الصفحات */
+    .page-break {
+        page-break-before: always;
+        margin-top: 2cm;
+    }
+    
+    /* تنسيق خاص للبيانات البحثية */
+    .research-data {
+        font-family: "Courier New", monospace;
+        font-size: 11pt;
+        background: #f9f9f9;
+        padding: 0.5cm;
+        border: 1px solid #ddd;
+        margin-bottom: 0.5cm;
+    }
+    
+    /* تنسيق المراجع */
+    .references {
+        font-size: 10pt;
+        line-height: 1.4;
+    }
+    
+    .references li {
+        margin-bottom: 0.3cm;
+    }
+    
+    /* تنسيق الملخص التنفيذي */
+    .executive-summary {
+        background: #f5f5f5;
+        padding: 1cm;
+        border: 2px solid #000;
+        margin-bottom: 1cm;
+        font-style: italic;
+    }
+    
+    /* تنسيق التواريخ والأوقات */
+    .timestamp {
+        font-size: 9pt;
+        color: #666;
+        font-style: italic;
+    }
+    
+    /* إزالة الفواصل من العناصر المحددة */
+    .no-break {
+        page-break-inside: avoid !important;
+    }
+}
